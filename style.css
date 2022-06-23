@@ -31,6 +31,7 @@
 }
 .hamburger{
 	cursor: pointer;
+	z-index: 9999;
 }
 .ham{
 	width: 30px;
@@ -51,21 +52,18 @@
 }
 .links{
 	position: absolute;
-	width: 0;
-	height: 0;
-	visibility: hidden;
-	top: 3rem;
-	transition: 500ms ease;
+	display: none;
+	transition: all 500ms ease;
 }
 .links.active{
 	right: 0;
-	top: 3rem;
+	top: 0;
 	width: 70%;
-	visibility: visible;
+	display: block;
 	height: 100vh;
 	background-color: hsl(0, 0%, 98%);
 	padding-left: 1rem;
-	padding-top: 2.5rem;
+	padding-top: 4rem;
 }
 .links ul{
 	list-style: none;
@@ -81,16 +79,12 @@ li:hover{
 	color: hsl(0, 0%, 41%);
 }
 .extraLinks{
-	width: 0;
-	height: 0;
-	visibility: hidden;
-	transition: 100ms ease;
+	display: none;
+	transition: all 100ms ease;
 }
 .extraLinks.active{
 	padding-top: 5px;
-	width: 100%;
-	height: 100%;
-	visibility: visible;
+	display: block;
 }
 .item2 li{
 	display: block;
@@ -141,7 +135,7 @@ li:hover{
 	margin-left: auto;
 	margin-right: auto;
 	background-color: hsl(0, 0%, 8%);
-	transition: 300ms ease;
+	transition: all 300ms ease;
 }
 .divText a:hover{
 	background-color: hsl(0, 0%, 41%);
@@ -227,7 +221,7 @@ li:hover{
 		display: flex;
 		flex-direction: row-reverse;
 		justify-content: space-between;
-		justify-content: center;
+		align-items: center;
 		gap: 1rem;
 		width: 90%;
 		margin-right: auto;
